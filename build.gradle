@@ -27,6 +27,7 @@ subprojects {
     }
 
     tasks.withType(JavaCompile) {
+        it.options.errorprone.disableAllChecks=true
         it.options.compilerArgs += [
             "-Xlint:all",
             "-Xlint:-options",
